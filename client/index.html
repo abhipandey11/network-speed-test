@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Network Speed Test</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/raphael/raphael.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/justgage"></script>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+margin:0;
+padding:0;
+}
+
+h1{
+margin-top:10px;
+}
+
+button{
+padding:12px 30px;
+font-size:18px;
+background:#22c55e;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin-top:10px;
+}
+
+#gauge{
+width:320px;
+height:220px;
+margin:auto;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:10px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#1e293b;
+padding:12px;
+border-radius:10px;
+width:180px;
+}
+
+.graph-container{
+width:420px;
+margin:10px auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Network Speed Test</h1>
+
+<div id="gauge"></div>
+
+<button onclick="startTest()">Start Test</button>
+
+<div class="container">
+
+<div class="card">
+<h3 id="ping">Ping: --</h3>
+</div>
+
+<div class="card">
+<h3 id="download">Download: --</h3>
+</div>
+
+<div class="card">
+<h3 id="upload">Upload: --</h3>
+</div>
+
+</div>
+
+<div class="graph-container">
+<canvas id="speedChart"></canvas>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "network-speed-test-server",
+  "version": "1.0.0",
+  "description": "Backend for network speed test",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.0"
+  }
+}
