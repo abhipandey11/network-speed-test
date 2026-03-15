@@ -146,6 +146,7 @@ const reader = response.body.getReader();
 let received=0;
 
 let startTime=performance.now();
+const TEST_DURATION = 5000;
 
 while(true){
 
@@ -155,7 +156,11 @@ if(done) break;
 
 received += value.length;
 
-let elapsed=(performance.now()-startTime)/1000;
+let now = performance.now();
+
+if(now - startTime > TEST_DURATION) break;
+
+let elapsed=(now-startTime)/1000;
 
 let speed=(received*8)/(elapsed*1024*1024);
 
