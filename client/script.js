@@ -1,4 +1,4 @@
-const server = "https://speedtest-server.onrender.com";
+const server = "https://network-speed-test-wez6.onrender.com";
 
 /* SPEEDOMETER */
 
